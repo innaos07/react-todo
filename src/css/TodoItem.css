@@ -1,0 +1,98 @@
+.todo__item {
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-right: 100px;
+    
+    background: -webkit-linear-gradient(270deg, rgb(95, 98, 208), rgb(161, 46, 218) 52%);
+    background: -moz-linear-gradient(270deg, rgb(95, 98, 208), rgb(161, 46, 218) 52%);
+    background: linear-gradient(270deg, rgb(95, 98, 208), rgb(161, 46, 218) 52%);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+
+    box-shadow: 0 0 8px -2px rgba(0,0,0,0.2);
+}
+
+.todo__item:hover {
+    box-shadow: 0 0 7px 1px rgba(0,0,0,0.25);
+    transition: all 0.3s;
+}
+
+.todo__task--active,
+.todo__task--completed {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    word-wrap: break-word;
+}
+
+.todo__task--active {
+    color: #fff;
+}
+
+.todo__task--completed {
+    opacity: 0.3;
+    text-decoration: line-through;
+}
+
+.todo__btn-edit, 
+.todo__btn-delete {
+    box-sizing: border-box;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+}
+
+.todo__btn-edit { 
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    
+    background-image: url("../img/todo-edit.svg");
+    background-size: 120%;
+    background-position: 50% ;
+}
+
+.todo__btn-delete { 
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    
+    background-image: url("../img/todo-delete.svg");
+}
+
+.todo__btn-edit:hover, 
+.todo__btn-delete:hover {
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+
+.todo__btn-edit:active, 
+.todo__btn-delete:active {
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+@media (min-width: 768px) {
+    .todo__item {
+        width: 700px;
+    }
+
+    .todo__task--active,
+    .todo__task--completed {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
